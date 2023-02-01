@@ -92,4 +92,16 @@ Example:
 - `contracts/interfaces/ISherlockStrategy.sol`
 
 
+
+**sherlock-v2-core**
+- `contracts/SherBuy.sol`
+- `contracts/SherClaim.sol`
+- `contracts/Sherlock.sol`
+- `contracts/interfaces/ISherClaim.sol`
+- `contracts/interfaces/ISherlock.sol`
+- `contracts/interfaces/ISherlockGov.sol`
+- `contracts/interfaces/ISherlockPayout.sol`
+- `contracts/interfaces/ISherlockStrategy.sol`
+
+
 # About {project}
