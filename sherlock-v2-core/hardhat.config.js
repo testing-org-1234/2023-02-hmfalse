@@ -4,62 +4,15 @@ require('hardhat-gas-reporter');
 require('hardhat-contract-sizer');
 require('@nomiclabs/hardhat-etherscan');
 require('dotenv').config();
-const { DefenderRelaySigner, DefenderRelayProvider } = require('defender-relay-client/lib/ethers');
-const rp = require('request-promise');
-
-const Sherlock = '0x0865a889183039689034dA55c1Fd12aF5083eabF';
-const TWO_WEEKS = 12096e5;
-const FOUR_HOURS_IN_SECONDS = 4 * 60 * 60;
+/**
+ * @type import('hardhat/config').HardhatUserConfig
+ */
 
 const ETHERSCAN_API = process.env.ETHERSCAN_API || '';
 const ALCHEMY_API_KEY_MAINNET = process.env.ALCHEMY_API_KEY_MAINNET || '';
 const ALCHEMY_API_KEY_GOERLI = process.env.ALCHEMY_API_KEY_GOERLI || '';
 const PRIVATE_KEY_GOERLI = process.env.PRIVATE_KEY_GOERLI || '';
 const PRIVATE_KEY_MAINNET = process.env.PRIVATE_KEY_MAINNET || '';
-const RELAY_CREDENTIALS = {
-  apiKey: process.env.RELAY_API_KEY,
-  apiSecret: process.env.RELAY_API_SECRET,
-};
-const RELAY_PROVIDER = new DefenderRelayProvider(RELAY_CREDENTIALS);
-const RELAY_SIGNER = new DefenderRelaySigner(RELAY_CREDENTIALS, RELAY_PROVIDER, {
-  speed: 'fast',
-  validForSeconds: FOUR_HOURS_IN_SECONDS,
-});
-
-/**
- * @type import('hardhat/config').HardhatUserConfig
- */
-
-task('restake', 'Send restaking transaction').setAction(async (taskArgs) => {
-  const sherlock = await ethers.getContractAt('Sherlock', Sherlock);
-  const NOW = Date.now();
-
-  const response = await rp({ uri: 'http://mainnet.indexer.sherlock.xyz/status', json: true });
-  if (!response['ok']) {
-    console.log('Invalid response');
-    return;
-  }
-  for (const element of response['data']['staking_positions']) {
-    // lockup_end (in milisecond) + TWO WEEKS
-    const ARB_RESTAKE = element['lockup_end'] * 1000 + TWO_WEEKS;
-    if (NOW < ARB_RESTAKE) {
-      continue;
-    }
-
-    const result = await sherlock.viewRewardForArbRestake(element['id']);
-    if (!result[1]) {
-      console.log('Not able to restake', element['id']);
-      continue;
-    }
-
-    console.log('restaking.. ', element['id']);
-    try {
-      await sherlock.connect(RELAY_SIGNER).arbRestake(element['id']);
-    } catch (err) {
-      console.log(err);
-    }
-  }
-});
 
 module.exports = {
   solidity: {
@@ -90,7 +43,7 @@ module.exports = {
     mainnet: {
       timeout: 999999999,
       url: `https://eth-mainnet.alchemyapi.io/v2/${ALCHEMY_API_KEY_MAINNET}`,
-      gasPrice: 32000000000,
+      gasPrice: 100000000000,
       accounts: [PRIVATE_KEY_MAINNET].filter((item) => item !== ''),
     },
     goerli: {
