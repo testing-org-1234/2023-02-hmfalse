@@ -88,6 +88,11 @@ Example:
 
 
 
+**2022-12-aave**
+- `contract.sol`
+
+
+
 **sherlock-v2-core**
 - `contracts/SherBuy.sol`
 - `contracts/SherClaim.sol`
