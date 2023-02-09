@@ -33,32 +33,4 @@ Example:
 # Audit scope
 
 
-**sherlock-v1-core**
-**sherlock-v2-core**
-- `contracts/managers/AaveV2Strategy.sol`
-- `contracts/managers/Manager.sol`
-- `contracts/managers/MasterStrategy.sol`
-- `contracts/managers/SherDistributionManager.sol`
-- `contracts/managers/SherDistributionManagerEmpty.sol`
-- `contracts/managers/SherlockClaimManager.sol`
-- `contracts/managers/SherlockProtocolManager.sol`
-- `contracts/strategy/AaveStrategy.sol`
-- `contracts/strategy/CompoundStrategy.sol`
-- `contracts/strategy/EulerStrategy.sol`
-- `contracts/strategy/MapleStrategy.sol`
-- `contracts/strategy/TrueFiStrategy.sol`
-- `contracts/strategy/base/BaseMaster.sol`
-- `contracts/strategy/base/BaseNode.sol`
-- `contracts/strategy/base/BaseSplitter.sol`
-- `contracts/strategy/base/BaseStrategy.sol`
-- `contracts/strategy/compound/LibCompound.sol`
-- `contracts/strategy/splitters/AlphaBetaEqualDepositMaxSplitter.sol`
-- `contracts/strategy/splitters/AlphaBetaEqualDepositSplitter.sol`
-- `contracts/strategy/splitters/AlphaBetaSplitter.sol`
-- `contracts/SherBuy.sol`
-- `contracts/SherClaim.sol`
-- `contracts/Sherlock.sol`
-
-
-
 # About {project}
