@@ -33,4 +33,31 @@ Example:
 # Audit scope
 
 
+[sherlock-v2-core @ 355c70df23aa9aa7d46567c9540a6d15be93fcab](https://github.com/sherlock-protocol/sherlock-v2-core/tree/355c70df23aa9aa7d46567c9540a6d15be93fcab)
+- [sherlock-v2-core/contracts/SherBuy.sol](sherlock-v2-core/contracts/SherBuy.sol)
+- [sherlock-v2-core/contracts/SherClaim.sol](sherlock-v2-core/contracts/SherClaim.sol)
+- [sherlock-v2-core/contracts/Sherlock.sol](sherlock-v2-core/contracts/Sherlock.sol)
+- [sherlock-v2-core/contracts/managers/AaveV2Strategy.sol](sherlock-v2-core/contracts/managers/AaveV2Strategy.sol)
+- [sherlock-v2-core/contracts/managers/Manager.sol](sherlock-v2-core/contracts/managers/Manager.sol)
+- [sherlock-v2-core/contracts/managers/MasterStrategy.sol](sherlock-v2-core/contracts/managers/MasterStrategy.sol)
+- [sherlock-v2-core/contracts/managers/SherDistributionManager.sol](sherlock-v2-core/contracts/managers/SherDistributionManager.sol)
+- [sherlock-v2-core/contracts/managers/SherDistributionManagerEmpty.sol](sherlock-v2-core/contracts/managers/SherDistributionManagerEmpty.sol)
+- [sherlock-v2-core/contracts/managers/SherlockClaimManager.sol](sherlock-v2-core/contracts/managers/SherlockClaimManager.sol)
+- [sherlock-v2-core/contracts/managers/SherlockProtocolManager.sol](sherlock-v2-core/contracts/managers/SherlockProtocolManager.sol)
+- [sherlock-v2-core/contracts/strategy/AaveStrategy.sol](sherlock-v2-core/contracts/strategy/AaveStrategy.sol)
+- [sherlock-v2-core/contracts/strategy/CompoundStrategy.sol](sherlock-v2-core/contracts/strategy/CompoundStrategy.sol)
+- [sherlock-v2-core/contracts/strategy/EulerStrategy.sol](sherlock-v2-core/contracts/strategy/EulerStrategy.sol)
+- [sherlock-v2-core/contracts/strategy/MapleStrategy.sol](sherlock-v2-core/contracts/strategy/MapleStrategy.sol)
+- [sherlock-v2-core/contracts/strategy/TrueFiStrategy.sol](sherlock-v2-core/contracts/strategy/TrueFiStrategy.sol)
+- [sherlock-v2-core/contracts/strategy/base/BaseMaster.sol](sherlock-v2-core/contracts/strategy/base/BaseMaster.sol)
+- [sherlock-v2-core/contracts/strategy/base/BaseNode.sol](sherlock-v2-core/contracts/strategy/base/BaseNode.sol)
+- [sherlock-v2-core/contracts/strategy/base/BaseSplitter.sol](sherlock-v2-core/contracts/strategy/base/BaseSplitter.sol)
+- [sherlock-v2-core/contracts/strategy/base/BaseStrategy.sol](sherlock-v2-core/contracts/strategy/base/BaseStrategy.sol)
+- [sherlock-v2-core/contracts/strategy/compound/LibCompound.sol](sherlock-v2-core/contracts/strategy/compound/LibCompound.sol)
+- [sherlock-v2-core/contracts/strategy/splitters/AlphaBetaEqualDepositMaxSplitter.sol](sherlock-v2-core/contracts/strategy/splitters/AlphaBetaEqualDepositMaxSplitter.sol)
+- [sherlock-v2-core/contracts/strategy/splitters/AlphaBetaEqualDepositSplitter.sol](sherlock-v2-core/contracts/strategy/splitters/AlphaBetaEqualDepositSplitter.sol)
+- [sherlock-v2-core/contracts/strategy/splitters/AlphaBetaSplitter.sol](sherlock-v2-core/contracts/strategy/splitters/AlphaBetaSplitter.sol)
+
+
+
 # About {project}
