@@ -32,6 +32,8 @@ Example:
 
 # Audit scope
 
+- first
+- second
 
 [sherlock-v2-core @ 355c70df23aa9aa7d46567c9540a6d15be93fcab](https://github.com/sherlock-protocol/sherlock-v2-core/tree/355c70df23aa9aa7d46567c9540a6d15be93fcab)
 - [sherlock-v2-core/contracts/SherBuy.sol](sherlock-v2-core/contracts/SherBuy.sol)
